@@ -4,9 +4,9 @@ public class App {
 
     private DatabaseConnectionFactory databaseConnectionFactory;
 
-    private App(){}
+    public App(){}
 
-    public App(String connectionProviderConfig){
+    public void configureConnection(String connectionProviderConfig){
         switch (connectionProviderConfig){
             case "postgresql":
                 databaseConnectionFactory = new PostgreSQLConnectionFactory();
